@@ -1,0 +1,30 @@
+@{ ViewData["Title"] = "Index"; }
+
+<table>
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Imagen</th>
+            <th>Capturar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model){
+        <tr>
+            <td>@item.idPokemon</td>
+            <td>@item.nombres</td>
+
+            <td>@item.tipo</td>
+            <td>
+                <img src="@item.imagen" width="100px" height="100px">
+            </td>
+            <td>
+                <a href="/EntrenadorPokemon/Create?idPokemon=@item.idPokemon" class="btn btn-danger">Capturar</a>
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>

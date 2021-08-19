@@ -1,0 +1,20 @@
+@{ ViewData["Title"] = "Create"; }
+
+<form action="/Pokemon/Create" method="POST">
+    <input type="text" name="nombres" placeholder="Nombre">
+    @Html.ValidationMessage("nb")
+    <br>
+    <select name="tipo">
+        <option value="">Seleccionar tipo</option>
+        <option value="Fuego">Fuego</option>
+        <option value="Agua">Agua</option>
+        <option value="Planta">Planta</option>
+        <option value="Viento">Viento</option>
+    </select>
+    @Html.ValidationMessage("tp")
+    <br>
+    <input type="file" name="imagen" />
+    @Html.ValidationMessage("img")
+    <br><br>
+    <button type="submit">Guardar</button>
+</form>

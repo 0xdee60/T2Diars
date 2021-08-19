@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Login Paciente";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/loginStyle.css" />
+</head>
+
+
+<body style="background-image: url(https://gacetadental.com/wp-content/uploads/2020/02/Clinicas-solidarias.jpg) ; background-size:cover;">
+    <div>
+        <form action="/auth/login" method="post" class="form-register">
+            <img src="~/images/iso.png" width="270" height="39" style="margin-top:-10px; margin-bottom:17px;margin-left:30px"/>
+            <span>@Html.ValidationMessage("Login")</span>
+
+            <input class="controls" type="text" name="usuario" id="nombres" placeholder="Usuario" />
+            <br />
+            <input class="controls" type="password" name="password" id="correo" placeholder="Contraseña" />
+            <br />
+            <button class="botons" type="submit">Aceptar</button>
+        </form>
+    </div>
+</body>
+
